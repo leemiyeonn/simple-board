@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BoardModule } from './board/board.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from 'dotenv';
-import { UserModule } from './user/user.module';
+import { BoardModule } from './routes/board/board.module';
+import { UserModule } from './routes/user/user.module';
 
 config({ path: '.env.local' });
 
