@@ -1,5 +1,8 @@
 import {
+  IsEmail,
+    IsIn,
     IsNotEmpty,
+    IsPhoneNumber,
     MaxLength,
     MinLength,
   } from 'class-validator';
@@ -17,4 +20,13 @@ import {
     @IsNotEmpty()
     @MinLength(2)
     name: string;
+
+    // @IsEmail()
+    // email: string;
+
+    // @IsPhoneNumber('KR')
+    // phone: string;
+
+    // @IsIn(['female','male'])
+    // gender: string;
   }

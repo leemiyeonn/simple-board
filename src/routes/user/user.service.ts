@@ -63,22 +63,22 @@ export class UserService {
     
       async getUser() {
         
-        // const qb = this.userRepository.createQueryBuilder();
-    
-        // qb.addSelect((subQuery) => {
-        //   return subQuery
-        //     .select('count(id)')
-        //     .from(Board, 'Board')
-        //     .where('Board.userId = User.id');
-        // }, 'User_boardCount');
-    
-        // return qb.getMany();
+        const qb = this.userRepository.createQueryBuilder();
 
-        return this.userRepository.find({
-          relations: {
-            boards: true
-          }
-        })
+        qb.addSelect((subQuery) => {
+          return subQuery
+            .select('count(id)')
+            .from(Board, 'Board')
+            .where('Board.userId = User.id');
+        }, 'User_boardCount');
+    
+        return qb.getMany();
+
+        // return this.userRepository.find({
+        //   relations: {
+        //     boards: true
+        //   }
+        // })
       }
     
       async encryptPassword(password: string) {
