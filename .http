@@ -34,7 +34,7 @@ content-type: application/json
 ###
 
 # 게시글 삭제
-DELETE http://localhost:3000/board/3
+DELETE http://localhost:3000/board/4
 
 ###
 
@@ -54,9 +54,9 @@ POST http://localhost:3000/user
 content-type: application/json
 
 {
-    "username": "fastcampus2024",
-    "name": "fastcampusname2",
-    "password": "fastcampuspassword"
+    "username": "user",
+    "password": "pass",
+    "name": "nn"
 }
 
 ###
@@ -67,7 +67,25 @@ POST http://localhost:3000/user/login
 content-type: application/json
 
 {
+    "username": "user",
+    "password": "pass"
+}
+
+###
+
+# 유저 로그인 (passport)
+
+POST http://localhost:3000/login
+content-type: application/json
+
+{
     "username": "fastcampus2024",
     "password": "fastcampuspassword"
 }
 
+###
+
+# 유저 ME
+GET http://localhost:3000/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoibm4iLCJpYXQiOjE3MTYwOTIxMTAsImV4cCI6MTcxNjA5NTcxMH0.QD6doMfHmyP1ctcPyuPrS9htFyor1c0a_5-MfVLIP0U

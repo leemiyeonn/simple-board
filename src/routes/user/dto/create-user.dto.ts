@@ -8,12 +8,12 @@ import {
   } from 'class-validator';
   
   export class CreateUserDto {
-    @MinLength(8)
+    @MinLength(3)
     @MaxLength(20)
     @IsNotEmpty()
     username: string;
   
-    @MinLength(8)
+    @MinLength(4)
     @IsNotEmpty()
     password: string;
   

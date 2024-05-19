@@ -27,12 +27,6 @@ export class UserService {
         });
       }
     
-      async getUserByUsername(username: string) {
-        return this.userRepository.findOneBy({
-          username,
-        });
-      }
-    
       async login(data: LoginUserDto) {
         const { username, password } = data;
     
@@ -79,6 +73,12 @@ export class UserService {
         //     boards: true
         //   }
         // })
+      }
+
+      async getUserByUsername(username: string) {
+        return this.userRepository.findOneBy({
+          username,
+        });
       }
     
       async encryptPassword(password: string) {
