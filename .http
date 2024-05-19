@@ -8,17 +8,17 @@ GET http://localhost:3000/board
 ###
 
 # 게시글 가져오기
-GET http://localhost:3000/board/3
+GET http://localhost:3000/board/1
 
 ###
 
 # 게시글 작성
 POST http://localhost:3000/board
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
 
 {
-  "userId": 1,
-  "contents": "2new board contents2"
+  "contents": "new newnenewnenwe"
 }
 
 ###
@@ -54,9 +54,9 @@ POST http://localhost:3000/user
 content-type: application/json
 
 {
-    "username": "user",
-    "password": "pass",
-    "name": "nn"
+    "username": "user1234",
+    "password": "pass1234",
+    "name": "nn1234"
 }
 
 ###
@@ -79,8 +79,8 @@ POST http://localhost:3000/login
 content-type: application/json
 
 {
-    "username": "fastcampus2024",
-    "password": "fastcampuspassword"
+    "username": "user",
+    "password": "pass"
 }
 
 ###
@@ -88,4 +88,4 @@ content-type: application/json
 # 유저 ME
 GET http://localhost:3000/me
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoibm4iLCJpYXQiOjE3MTYwOTIxMTAsImV4cCI6MTcxNjA5NTcxMH0.QD6doMfHmyP1ctcPyuPrS9htFyor1c0a_5-MfVLIP0U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk1NDY2LCJleHAiOjE3MTYwOTkwNjZ9.R4UDn5DUFwbyqpZqIwQMgHWJev0jpMV-3l1B3v0SGxU

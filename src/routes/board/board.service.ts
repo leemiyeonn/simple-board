@@ -32,24 +32,31 @@ export class BoardService {
   }
 
   async create(data: CreateBoardDto) {
-    await this.boardRepository.save(data);
+    return this.boardRepository.save(data);
   }
 
-  async update(id: number, data: UpdateBoardDto) {
+  async update(userId: number, id: number, data: UpdateBoardDto) {
     const board = await this.getBoardById(id);
 
     if (!board) throw new HttpException('NOT_FOUND', HttpStatus.NOT_FOUND);
+
+    if (userId !== board.userId) {
+      throw new UnauthorizedException();
+    }
 
     return this.boardRepository.update(id, {
       ...data,
     });
   }
 
-
-  async delete(id: number) {
+  async delete(userId: number, id: number) {
     const board = await this.getBoardById(id);
 
     if (!board) throw new HttpException('NOT_FOUND', HttpStatus.NOT_FOUND);
+
+    if (userId !== board.userId) {
+      throw new UnauthorizedException();
+    }
 
     return this.boardRepository.remove(board);
   }
