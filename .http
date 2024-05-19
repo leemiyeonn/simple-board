@@ -45,3 +45,18 @@ DELETE http://localhost:3000/board/3
 GET http://localhost:3000/user
 
 ###
+
+###
+
+# 유저 회원가입
+
+POST http://localhost:3000/user
+content-type: application/json
+
+{
+    "username": "fastcampus2024",
+    "name": "fastcampusname2",
+    "password": "fastcampuspassword"
+}
+
+###
