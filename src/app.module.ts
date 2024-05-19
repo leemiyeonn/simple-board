@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { BoardModule } from './board/board.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from 'dotenv';
+import { UserModule } from './user/user.module';
 
 config({ path: '.env.local' });
 
@@ -21,6 +22,7 @@ config({ path: '.env.local' });
       logging: true,
     }),
     BoardModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
