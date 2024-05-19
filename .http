@@ -18,14 +18,15 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
 
 {
-  "contents": "new newnenewnenwe"
+  "contents": "new newnenewnenweeee"
 }
 
 ###
 
 # 게시글 수정
-PUT http://localhost:3000/board/3
+PUT http://localhost:3000/board/1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
 
 {
   "contents": "3edited board contents3"
@@ -34,7 +35,10 @@ content-type: application/json
 ###
 
 # 게시글 삭제
-DELETE http://localhost:3000/board/4
+DELETE http://localhost:3000/board/1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
+
 
 ###
 
