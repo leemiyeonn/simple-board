@@ -1,0 +1,95 @@
+GET http://localhost:3000
+
+###
+
+# 게시글 전체 가져오기
+GET http://localhost:3000/board
+
+###
+
+# 게시글 가져오기
+GET http://localhost:3000/board/1
+
+###
+
+# 게시글 작성
+POST http://localhost:3000/board
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
+
+{
+  "contents": "new newnenewnenweeee"
+}
+
+###
+
+# 게시글 수정
+PUT http://localhost:3000/board/1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
+
+{
+  "contents": "3edited board contents3"
+}
+
+###
+
+# 게시글 삭제
+DELETE http://localhost:3000/board/1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk2MzU5LCJleHAiOjE3MTYwOTk5NTl9.Ztcd0Nmyy7YuGs7SrwQuGPHi3gHjht34BpwB4A_ytJQ
+
+
+###
+
+###
+
+# 유저 리스트 가져오기
+
+GET http://localhost:3000/user
+
+###
+
+###
+
+# 유저 회원가입
+
+POST http://localhost:3000/user
+content-type: application/json
+
+{
+    "username": "user1234",
+    "password": "pass1234",
+    "name": "nn1234"
+}
+
+###
+
+# 유저 로그인
+
+POST http://localhost:3000/user/login
+content-type: application/json
+
+{
+    "username": "user",
+    "password": "pass"
+}
+
+###
+
+# 유저 로그인 (passport)
+
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "username": "user",
+    "password": "pass"
+}
+
+###
+
+# 유저 ME
+GET http://localhost:3000/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJ1c2VyIiwibmFtZSI6Im5uIiwiaWF0IjoxNzE2MDk1NDY2LCJleHAiOjE3MTYwOTkwNjZ9.R4UDn5DUFwbyqpZqIwQMgHWJev0jpMV-3l1B3v0SGxU
